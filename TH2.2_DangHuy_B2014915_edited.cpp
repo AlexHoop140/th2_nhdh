@@ -73,14 +73,14 @@ void READ_LIST(List& L){
 	Position c = L; 
 	printf(" Nhap so phan tu cua danh sach? ");
 	scanf(" %d",&n);
-  fflush(stdin);
+//  	fflush(stdin);
   
 	for(int i=1; i<=n; i++){
 		printf(" Nhap phan tu thu %d : ",i);
 		fflush(stdin);
-    char str[200];
+    	char str[200];
 		fgets(str, 200, stdin);
-    ElementType x = strdup(str);
+    	ElementType x = strdup(str);
 		INSERT_LIST(x,c,L);
 		c = c->Next;
 	}
@@ -94,9 +94,9 @@ void READ__REV_LIST(List& L){
 	for(int i=1; i<=n; i++){
 		printf(" Nhap phan tu thu %d : ",i);
 		fflush(stdin);
-    char str[200];
+    	char str[200];
 		fgets(str, 200, stdin);
-    ElementType x = strdup(str);
+    	ElementType x = strdup(str);
 		INSERT_LIST(x,L,L);
 	}
 }
@@ -104,10 +104,10 @@ void READ__REV_LIST(List& L){
 void PRINT_LIST(List L){
     Position p = L;
 	while (p->Next !=NULL){
-		printf(" %s  ", RETRIEVE(p,L));
-        p = p -> Next; 
+		printf(" %s ", RETRIEVE(p,L));
+        p = p->Next; 
     }
-	printf("\n\n");
+//	printf("\n\n");
 }
 
 void SWAP (Position P, Position Q){
@@ -130,12 +130,12 @@ void SORT(List& L){
 }
 
 int main(){
-  List list;
+	List list;
 
-  MAKENULL_LIST(list);
-  READ_LIST(list);
-  PRINT_LIST(list);
-  return 0;
+	MAKENULL_LIST(list);
+	READ_LIST(list);
+	PRINT_LIST(list);
+	return 0;
 }
 
 

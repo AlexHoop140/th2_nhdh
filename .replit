@@ -1,0 +1,2 @@
+language = "cpp"
+run = "g++ -o th2 TH2.2_DangHuy_B2014915_edited.cpp"
